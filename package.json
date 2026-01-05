@@ -1,0 +1,35 @@
+{
+  "name": "codemirror-forge",
+  "version": "1.0.0",
+  "description": "WordPress plugin for customizing CodeMirror editor",
+  "author": "Marios Giannopoulos",
+  "license": "GPL-3",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mgiannopoulos24/codemirror-forge"
+  },
+  "scripts": {
+    "start": "wp-env start",
+    "stop": "wp-env stop",
+    "destroy": "wp-env destroy",
+    "shell": "wp-env run cli /bin/bash",
+    "bundle": "bunx bestzip codemirror-forge.zip codemirror-forge.php includes/ views/ assets/",
+    "lint": "phplint '*.php' 'includes/**/*.php' 'views/**/*.php'"
+  },
+  "dependencies": {
+    "@codemirror/basic-setup": "^0.20.0",
+    "@codemirror/commands": "^6.10.1",
+    "@codemirror/lang-javascript": "^6.2.4",
+    "@codemirror/lang-php": "^6.0.2",
+    "@codemirror/lang-css": "^6.3.1",
+    "@codemirror/lang-html": "^6.4.11",
+    "@codemirror/theme-one-dark": "^6.1.3",
+    "codemirror": "^6.0.2",
+    "phplint": "^2.0.5",
+    "install": "^0.13.0"
+  },
+  "devDependencies": {
+    "@wordpress/env": "^10.37.0",
+    "bestzip": "^2.2.1"
+  }
+}

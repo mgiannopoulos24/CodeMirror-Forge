@@ -1,0 +1,116 @@
+/**
+ * Admin styles for CodeMirror Forge
+ *
+ * @package CM_Forge
+ */
+
+.cm-forge-preview {
+    margin-top: 30px;
+    padding: 20px;
+    background: #fff;
+    border: 1px solid #ccd0d4;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.04);
+}
+
+.cm-forge-preview h2 {
+    margin-top: 0;
+}
+
+.form-table th {
+    width: 200px;
+}
+
+.form-table input[type="number"] {
+    width: 80px;
+}
+
+.form-table input[type="text"]#cm_line_height {
+    width: 80px;
+}
+
+.form-table select {
+    min-width: 200px;
+}
+
+/* Font select with Select2 */
+/* Select2 container sizing for font select */
+.select2-container.select2-container--default {
+    width: 200px !important;
+}
+
+.select2-container.select2-container--default .select2-selection--single {
+    height: 30px;
+    
+}
+
+.select2-container.select2-container--default .select2-selection--single .select2-selection__rendered {
+    line-height: 30px;
+    padding-left: 8px;
+    padding-right: 20px;
+}
+
+.select2-container.select2-container--default .select2-selection--single .select2-selection__arrow {
+    height: 28px;
+}
+
+/* Select2 customization for font select */
+.select2-container--default .select2-results__option {
+    padding: 6px 12px;
+}
+
+.select2-container--default .select2-results__option--highlighted[aria-selected] {
+    background-color: #2271b1;
+    color: white;
+}
+
+.cm-forge-preview-textarea {
+    width: 100%;
+    min-height: 300px;
+    font-family: monospace;
+    border: 1px solid #ccd0d4;
+    border-radius: 4px;
+}
+
+.cm-forge-preview .CodeMirror {
+    border: 1px solid #ccd0d4;
+    border-radius: 4px;
+    margin-top: 10px;
+}
+
+.cm-forge-preview-controls {
+    margin-bottom: 15px;
+}
+
+.cm-forge-preview-controls label {
+    font-weight: 600;
+    margin-right: 10px;
+}
+
+.cm-forge-preview-select {
+    min-width: 150px;
+    padding: 4px 8px;
+    border: 1px solid #8c8f94;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+/* Select2 sizing for theme dropdown */
+#cm_theme + .select2-container {
+    width: 200px !important;
+    min-width: 200px;
+}
+
+/* Custom Select2 dropdown arrow */
+.select2-container--default .select2-selection--single .select2-selection__arrow {
+    background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20width%3D%2220%22%20height%3D%2220%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M5%206l5%205%205-5%202%201-7%207-7-7%202-1z%22%20fill%3D%22%23555%22%2F%3E%3C%2Fsvg%3E");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 16px 16px;
+    width: 20px;
+    height: 20px;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__arrow b {
+    display: none;
+}
+

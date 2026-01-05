@@ -1,0 +1,82 @@
+/**
+ * Sample CSS file for CodeMirror Forge preview
+ * 
+ * @package CM_Forge
+ */
+
+/* CodeMirror Forge Editor Styles */
+.cm-forge-editor {
+    position: relative;
+    width: 100%;
+    min-height: 300px;
+    font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* Theme: One Dark */
+.cm-theme-one-dark .CodeMirror {
+    background-color: #282c34;
+    color: #abb2bf;
+    border-radius: 4px;
+    padding: 10px;
+}
+
+.cm-theme-one-dark .CodeMirror-gutters {
+    background-color: #282c34;
+    border-right: 1px solid #3e4451;
+}
+
+.cm-theme-one-dark .CodeMirror-linenumber {
+    color: #5c6370;
+    padding: 0 10px;
+}
+
+/* Theme: Dracula */
+.cm-theme-dracula .CodeMirror {
+    background-color: #282a36;
+    color: #f8f8f2;
+}
+
+.cm-theme-dracula .CodeMirror-gutters {
+    background-color: #282a36;
+    border-right: 1px solid #44475a;
+}
+
+/* Font customization */
+.CodeMirror {
+    transition: font-size 0.2s ease, font-weight 0.2s ease;
+}
+
+.CodeMirror-code,
+.CodeMirror pre,
+.CodeMirror-line {
+    font-family: inherit;
+    font-weight: inherit;
+}
+
+/* Ruler column */
+.cm-forge-ruler {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    background: rgba(128, 128, 128, 0.3);
+    pointer-events: none;
+    z-index: 10;
+}
+
+/* Word wrap */
+.CodeMirror-wrap pre {
+    word-wrap: break-word;
+    white-space: pre-wrap;
+    word-break: normal;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .cm-forge-editor {
+        font-size: 12px;
+    }
+}
+

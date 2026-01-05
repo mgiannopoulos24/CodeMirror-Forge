@@ -1,0 +1,32 @@
+{
+  "name": "codemirror-forge",
+  "version": "1.0.0",
+  "description": "A WordPress plugin for customizing CodeMirror editor",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mgiannopoulos24/codemirror-forge"
+  },
+  "author": "Marios Giannopoulos",
+  "license": "GPL-3",
+  "features": [
+    "Theme selection",
+    "Font customization",
+    "Font weight control",
+    "Line numbers toggle",
+    "Word wrap option",
+    "Ruler column guide"
+  ],
+  "supportedThemes": [
+    "default",
+    "dark",
+    "one-dark",
+    "dracula",
+    "material",
+    "solarized",
+    "nord",
+    "github-light",
+    "github-dark",
+    "tokyo-night"
+  ]
+}
+

@@ -1,0 +1,51 @@
+/**
+ * Editor styles for CodeMirror Forge
+ *
+ * @package CM_Forge
+ */
+ 
+/* Custom font size adjustments */
+.CodeMirror {
+    transition: font-size 0.2s ease, font-weight 0.2s ease;
+}
+
+/* Font family styling */
+.CodeMirror,
+.CodeMirror-code,
+.CodeMirror pre {
+    font-family: inherit;
+}
+
+/* Font weight styling */
+.CodeMirror-code,
+.CodeMirror pre,
+.CodeMirror-line {
+    font-weight: inherit;
+    font-synthesis: weight;
+}
+
+/* Word wrap styling */
+.CodeMirror-wrap pre {
+    word-wrap: break-word;
+    white-space: pre-wrap;
+    word-break: normal;
+}
+
+/* Ruler column styling */
+.CodeMirror-lines {
+    position: relative;
+}
+
+.cm-forge-ruler {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    background: rgba(128, 128, 128, 0.3);
+    pointer-events: none;
+    z-index: 10;
+}
+
+/* Darker ruler for dark themes */
+/* Note: Ruler styling is handled by individual CodeMirror 5 themes */
+
