@@ -129,6 +129,7 @@
             fontWeightSelect,
             document.getElementById('cm_font_size'),
             document.getElementById('cm_line_height'),
+            document.getElementById('cm_letter_spacing'),
             document.getElementById('cm_theme'),
             document.getElementById('cm_line_numbers'),
             document.getElementById('cm_word_wrap'),
@@ -138,7 +139,8 @@
         settingsInputs.forEach(function(input) {
             if (input) {
                 input.addEventListener('change', updatePreviewEditor);
-                if (input.type === 'number') {
+                // Add input event for number inputs and text inputs (like line height)
+                if (input.type === 'number' || input.id === 'cm_line_height') {
                     input.addEventListener('input', updatePreviewEditor);
                 }
             }
@@ -358,6 +360,7 @@
         const fontWeight = document.getElementById('cm_font_weight') ? document.getElementById('cm_font_weight').value : (settings.fontWeight || '400');
         const fontSize = document.getElementById('cm_font_size') ? parseInt(document.getElementById('cm_font_size').value) : (settings.fontSize || 14);
         const lineHeight = document.getElementById('cm_line_height') ? document.getElementById('cm_line_height').value.trim() : (settings.lineHeight || '1.5');
+        const letterSpacing = document.getElementById('cm_letter_spacing') ? parseFloat(document.getElementById('cm_letter_spacing').value) : (settings.letterSpacing !== undefined ? settings.letterSpacing : 0);
         const lineNumbers = document.getElementById('cm_line_numbers') ? document.getElementById('cm_line_numbers').checked : (settings.lineNumbers !== false);
         const wordWrap = document.getElementById('cm_word_wrap') ? document.getElementById('cm_word_wrap').checked : (settings.wordWrap || false);
         const rulerColumn = document.getElementById('cm_ruler_column') ? parseInt(document.getElementById('cm_ruler_column').value) : (settings.rulerColumn || 0);
@@ -487,6 +490,21 @@
             const codeElements = editorElement.querySelectorAll('.CodeMirror-code, .CodeMirror pre, .CodeMirror-line');
             codeElements.forEach(function(el) {
                 el.style.lineHeight = lineHeightValue;
+            });
+        }
+
+        // Apply letter spacing (exclude gutters)
+        if (letterSpacing !== undefined && letterSpacing !== null) {
+            const letterSpacingValue = letterSpacing + 'px';
+            // Don't apply to editorElement to avoid affecting gutters
+            const codeElements = editorElement.querySelectorAll('.CodeMirror-code, .CodeMirror pre, .CodeMirror-line');
+            codeElements.forEach(function(el) {
+                el.style.letterSpacing = letterSpacingValue;
+            });
+            // Explicitly reset letter spacing for gutters
+            const gutterElements = editorElement.querySelectorAll('.CodeMirror-gutters, .CodeMirror-gutter, .CodeMirror-linenumber');
+            gutterElements.forEach(function(el) {
+                el.style.letterSpacing = '0';
             });
         }
 

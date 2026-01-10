@@ -213,6 +213,21 @@
             });
         }
 
+        // Apply letter spacing (exclude gutters)
+        if (settings.letterSpacing !== undefined && settings.letterSpacing !== null) {
+            const letterSpacingValue = settings.letterSpacing + 'px';
+            // Don't apply to editorElement to avoid affecting gutters
+            const codeElements = editorElement.querySelectorAll('.CodeMirror-code, .CodeMirror pre, .CodeMirror-line');
+            codeElements.forEach(function(el) {
+                el.style.letterSpacing = letterSpacingValue;
+            });
+            // Explicitly reset letter spacing for gutters
+            const gutterElements = editorElement.querySelectorAll('.CodeMirror-gutters, .CodeMirror-gutter, .CodeMirror-linenumber');
+            gutterElements.forEach(function(el) {
+                el.style.letterSpacing = '0';
+            });
+        }
+
         // Apply line numbers
         if (settings.lineNumbers !== undefined) {
             cm.setOption('lineNumbers', settings.lineNumbers);

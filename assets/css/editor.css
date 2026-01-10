@@ -31,6 +31,18 @@
     word-break: normal;
 }
 
+/* Gutter spacing */
+.CodeMirror-linenumber {
+    padding-right: 12px !important;
+    letter-spacing: 0 !important;
+}
+
+/* Ensure gutters don't inherit letter spacing */
+.CodeMirror-gutters,
+.CodeMirror-gutter {
+    letter-spacing: 0 !important;
+}
+
 /* Ruler column styling */
 .CodeMirror-lines {
     position: relative;
@@ -45,7 +57,3 @@
     pointer-events: none;
     z-index: 10;
 }
-
-/* Darker ruler for dark themes */
-/* Note: Ruler styling is handled by individual CodeMirror 5 themes */
-

@@ -80,6 +80,7 @@ class CM_Forge_Editor {
             'fontWeight' => isset($options['font_weight']) ? $options['font_weight'] : '400',
             'fontSize' => isset($options['font_size']) ? $options['font_size'] : 14,
             'lineHeight' => isset($options['line_height']) ? $options['line_height'] : '1.5',
+            'letterSpacing' => isset($options['letter_spacing']) ? floatval($options['letter_spacing']) : 0,
             'lineNumbers' => isset($options['line_numbers']) ? $options['line_numbers'] : true,
             'wordWrap' => isset($options['word_wrap']) ? $options['word_wrap'] : false,
             'rulerColumn' => isset($options['ruler_column']) ? $options['ruler_column'] : 0,

@@ -98,6 +98,14 @@ class CM_Forge_Admin {
             'cm_forge_font_section'
         );
 
+        add_settings_field(
+            'letter_spacing',
+            __('Letter Spacing', 'codemirror-forge'),
+            array($this, 'render_letter_spacing_field'),
+            'codemirror-forge',
+            'cm_forge_font_section'
+        );
+
         // Line numbers section
         add_settings_section(
             'cm_forge_display_section',
@@ -164,6 +172,17 @@ class CM_Forge_Admin {
             } else {
                 // Fallback to default if invalid format
                 $sanitized['line_height'] = '1.5';
+            }
+        }
+
+        if (isset($input['letter_spacing'])) {
+            $letter_spacing = trim($input['letter_spacing']);
+            // Allow integer or float values in pixels
+            if (preg_match('/^-?\d+\.?\d*$/', $letter_spacing)) {
+                $sanitized['letter_spacing'] = floatval($letter_spacing);
+            } else {
+                // Fallback to 0 if invalid format
+                $sanitized['letter_spacing'] = 0;
             }
         }
 
@@ -343,6 +362,19 @@ class CM_Forge_Admin {
         <input type="text" name="cm_forge_options[line_height]" id="cm_line_height" 
                value="<?php echo esc_attr($line_height); ?>" placeholder="1.5 or 1.5em or 24px">
         <span class="description"><?php esc_html_e('Line height as multiplier (1.5) or with unit (1.5em, 24px). Default: 1.5', 'codemirror-forge'); ?></span>
+        <?php
+    }
+
+    /**
+     * Render letter spacing field
+     */
+    public function render_letter_spacing_field() {
+        $options = get_option('cm_forge_options', array());
+        $letter_spacing = isset($options['letter_spacing']) ? $options['letter_spacing'] : 0;
+        ?>
+        <input type="number" name="cm_forge_options[letter_spacing]" id="cm_letter_spacing" 
+               value="<?php echo esc_attr($letter_spacing); ?>" step="0.1" min="-5" max="10">
+        <span class="description"><?php esc_html_e('Letter spacing in pixels. Can be negative or positive. Default: 0', 'codemirror-forge'); ?></span>
         <?php
     }
 

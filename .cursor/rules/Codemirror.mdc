@@ -1,0 +1,112 @@
+---
+alwaysApply: true
+---
+
+# CodeMirror Forge Development Rules
+
+## CodeMirror Implementation Guidelines
+
+### CodeMirror 5 Structure
+- This project uses **CodeMirror 5** (not CodeMirror 6)
+- CodeMirror instances are accessed via `.CodeMirror` or `.CodeMirror-wrap` classes
+- CodeMirror instance is available as `editorElement.CodeMirror` or `editorElement.cm`
+- Settings are passed via `wp_localize_script` as `cmForgeSettings` object
+
+### Editor Customization Pattern
+When adding new editor customizations:
+
+1. **Settings Registration** (`includes/class-cm-forge-admin.php`):
+   - Add field registration in `register_settings()` method
+   - Add sanitization in `sanitize_settings()` method
+   - Add render method (e.g., `render_letter_spacing_field()`)
+
+2. **Settings Passing** (`includes/class-cm-forge-editor.php`):
+   - Add setting to `wp_localize_script` array in `enqueue_editor_assets()` method
+   - Use camelCase for JavaScript property names (e.g., `letterSpacing`)
+
+3. **Editor Application** (`assets/js/editor.js`):
+   - Add customization logic in `customizeEditor()` function
+   - Apply to code elements: `.CodeMirror-code`, `.CodeMirror pre`, `.CodeMirror-line`
+   - **Exclude gutters**: Never apply styling to `.CodeMirror-gutters`, `.CodeMirror-gutter`, or `.CodeMirror-linenumber`
+   - Explicitly reset gutter styles if needed
+
+4. **Admin Preview** (`assets/js/admin.js`):
+   - Add setting retrieval in `updatePreviewEditor()` function
+   - Add application logic matching `editor.js` pattern
+   - Add input to `settingsInputs` array for real-time updates
+   - For text inputs (like line height), add `input` event listener
+
+5. **CSS Styling** (`assets/css/editor.css`):
+   - Add styles for editor elements
+   - Always exclude gutters from custom styling
+   - Use `!important` sparingly, only when necessary
+
+### Gutter Handling Rules
+- **Never apply** font-family, font-weight, font-size, letter-spacing, or line-height to gutter elements
+- Always explicitly reset gutter styles: `.CodeMirror-gutters`, `.CodeMirror-gutter`, `.CodeMirror-linenumber`
+- Gutter spacing adjustments should use padding/margin, not letter-spacing
+
+### Real-time Preview Updates
+- Number inputs: Automatically get both `change` and `input` events
+- Text inputs: Must explicitly add `input` event listener (e.g., line height, letter spacing)
+- Add all new inputs to `settingsInputs` array in `admin.js`
+
+## Documentation Requirements
+
+### After Every Change
+**MANDATORY**: After making any code changes, you MUST update:
+
+1. **README.md**:
+   - Add new features to the "Features" section
+   - Update the "Usage" section if new settings are added
+   - Keep feature descriptions concise and user-friendly
+
+2. **CHANGELOG.md**:
+   - Add entries under appropriate version section
+   - Use semantic versioning:
+     - **MAJOR** (x.0.0): Breaking changes
+     - **MINOR** (x.y.0): New features (backward compatible)
+     - **PATCH** (x.y.z): Bug fixes only
+   - Categorize changes:
+     - `### Added` - New features
+     - `### Changed` - Changes to existing features
+     - `### Fixed` - Bug fixes
+     - `### Removed` - Removed features
+   - Update version links at the bottom of the file
+
+### Changelog Format
+- Follow [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) format
+- Use ISO date format (YYYY-MM-DD)
+- Include compare links for versions
+- Keep "Unreleased" section for work in progress
+
+### Version Bumping Guidelines
+- **New feature** (like letter spacing) → MINOR version (1.1.0)
+- **Bug fix only** → PATCH version (1.0.1)
+- **Breaking change** → MAJOR version (2.0.0)
+
+## Code Style
+
+### PHP
+- Follow WordPress coding standards
+- Use proper sanitization for all user inputs
+- Use `esc_attr()`, `esc_html()` for output
+- Register settings with proper sanitize callbacks
+
+### JavaScript
+- Use vanilla JavaScript (no jQuery dependencies for core functionality)
+- Use `'use strict'` mode
+- Check for undefined before accessing objects
+- Use descriptive function and variable names
+
+### CSS
+- Use meaningful class names with `cm-forge-` prefix for custom classes
+- Avoid `!important` unless absolutely necessary
+- Always consider gutter exclusion in styles
+
+## File Structure
+- `includes/class-cm-forge-admin.php` - Admin settings and UI
+- `includes/class-cm-forge-editor.php` - Editor asset enqueuing and settings passing
+- `assets/js/editor.js` - Main editor customization logic
+- `assets/js/admin.js` - Admin preview editor logic
+- `assets/css/editor.css` - Editor styling (excludes gutters from custom styles)

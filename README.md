@@ -14,8 +14,10 @@ CodeMirror Forge provides powerful customization options for WordPress CodeMirro
   - Adjust font weight (100-900)
   - Customize font size (minimum 10px, no maximum)
   - Set line height with multipliers (1.5) or custom units (1.5em, 24px, etc.)
+  - Adjust letter spacing in pixels (supports negative and positive values)
 - **Display Options**: 
   - Toggle line numbers on/off
+  - Enhanced gutter spacing for better readability
   - Enable/disable word wrap
   - Set ruler column for line length guidelines
 - **Live Preview**: Real-time preview editor that updates instantly as you change settings
@@ -85,6 +87,7 @@ This will start a WordPress instance at `http://localhost:8888`
    - **Font Weight**: Choose font weight (100-900)
    - **Font Size**: Set font size in pixels (minimum 10px)
    - **Line Height**: Set line height as multiplier (1.5) or with units (1.5em, 24px, etc.)
+   - **Letter Spacing**: Adjust letter spacing in pixels (can be negative or positive, default: 0)
    - **Line Numbers**: Toggle line number display
    - **Word Wrap**: Enable or disable word wrapping
    - **Ruler Column**: Set a column guide for line length (0 to disable)
@@ -162,6 +165,10 @@ Add new settings by:
 1. Registering the field in `register_settings()` method in `class-cm-forge-admin.php`
 2. Adding a render method for the field
 3. Applying the setting in `assets/js/editor.js` and `assets/js/admin.js` for preview
+
+## Changelog
+
+See [CHANGELOG.md](CHANGELOG.md) for a list of changes and version history.
 
 ## License
 
