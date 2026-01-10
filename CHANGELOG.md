@@ -5,6 +5,20 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.2.0] - 2026-01-10
+
+### Added
+- Full internationalization (i18n) support with WordPress translation system
+- Greek (el_GR) translation with complete localization of all plugin strings
+- Translation workflow scripts (`npm run i18n:lang`) for managing translations
+- Automatic locale detection with fallback support (el_GR → el)
+- Translation files structure (POT, PO, MO) in `languages/` directory
+- Enhanced text domain loading with improved locale handling
+
+### Changed
+- Improved text domain loading mechanism for better translation support
+- Updated plugin structure to support multiple languages
+
 ## [1.1.0] - 2026-01-10
 
 ### Added
@@ -34,5 +48,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Universal application to all CodeMirror editors in WordPress
 - Dynamic theme loading from CDN
 
+[1.2.0]: https://github.com/mgiannopoulos24/codemirror-forge/compare/v1.1.0...v1.2.0
 [1.1.0]: https://github.com/mgiannopoulos24/codemirror-forge/compare/v1.0.0...v1.1.0
 [1.0.0]: https://github.com/mgiannopoulos24/codemirror-forge/releases/tag/v1.0.0

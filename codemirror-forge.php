@@ -3,7 +3,7 @@
  * Plugin Name: CodeMirror Forge
  * Plugin URI: https://github.com/mgiannopoulos24/codemirror-forge
  * Description: Forge your perfect CodeMirror editor experience. Customize themes, fonts, and display options.
- * Version: 1.0.0
+ * Version: 1.2.0
  * Author: Marios Giannopoulos
  * Author URI: https://github.com/mgiannopoulos24
  * License: GPL v3
@@ -17,7 +17,7 @@ if (!defined('ABSPATH')) {
 }
 
 // Define plugin constants
-define('CM_FORGE_VERSION', '1.0.0');
+define('CM_FORGE_VERSION', '1.2.0');
 define('CM_FORGE_PLUGIN_DIR', plugin_dir_path(__FILE__));
 define('CM_FORGE_PLUGIN_URL', plugin_dir_url(__FILE__));
 define('CM_FORGE_PLUGIN_BASENAME', plugin_basename(__FILE__));

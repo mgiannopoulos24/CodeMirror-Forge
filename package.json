@@ -1,6 +1,6 @@
 {
   "name": "codemirror-forge",
-  "version": "1.0.0",
+  "version": "1.2.0",
   "description": "WordPress plugin for customizing CodeMirror editor",
   "author": "Marios Giannopoulos",
   "license": "GPL-3",
@@ -14,7 +14,8 @@
     "destroy": "wp-env destroy",
     "shell": "wp-env run cli /bin/bash",
     "bundle": "bunx bestzip codemirror-forge.zip codemirror-forge.php includes/ views/ assets/",
-    "lint": "phplint '*.php' 'includes/**/*.php' 'views/**/*.php'"
+    "lint": "phplint '*.php' 'includes/**/*.php' 'views/**/*.php'",
+    "i18n:lang": "./scripts/i18n-lang.sh"
   },
   "dependencies": {
     "@codemirror/basic-setup": "^0.20.0",

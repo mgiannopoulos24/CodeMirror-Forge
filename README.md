@@ -20,6 +20,7 @@ CodeMirror Forge provides powerful customization options for WordPress CodeMirro
   - Enhanced gutter spacing for better readability
   - Enable/disable word wrap
   - Set ruler column for line length guidelines
+- **Internationalization (i18n)**: Full translation support with Greek (el_GR) included and ready for additional languages
 - **Live Preview**: Real-time preview editor that updates instantly as you change settings
 - **Sample Code Preview**: Test your settings with sample JavaScript, PHP, CSS, HTML, and JSON files
 - **Easy Settings**: Intuitive admin interface for configuring all options
@@ -78,6 +79,12 @@ This will start a WordPress instance at `http://localhost:8888`
 - `bun run bundle` - Create a distribution zip file (`codemirror-forge.zip`) containing the plugin files
 - `bun run lint` - Run PHP linting on all PHP files in the project
 
+### Translation Scripts
+
+- `bun run i18n:lang <locale> all` - Generate POT, update PO, and compile MO for a specific language (e.g., `npm run i18n:lang el_GR all`)
+- `bun run i18n:lang <locale> update` - Update PO file from POT template
+- `bun run i18n:lang <locale> make-mo` - Compile MO file from PO file
+
 ## Usage
 
 1. Navigate to **Settings → CodeMirror Forge** in your WordPress admin
@@ -129,6 +136,12 @@ codemirror-forge/
 │       ├── example.css
 │       ├── example.html
 │       └── example.json
+├── languages/       # Translation files
+│   ├── codemirror-forge.pot  # Translation template
+│   ├── codemirror-forge-el_GR.po  # Greek translations
+│   └── codemirror-forge-el_GR.mo  # Compiled Greek translations
+├── scripts/        # Utility scripts
+│   └── i18n-lang.sh  # Translation management script
 ├── codemirror-forge.php   # Main plugin file
 ├── package.json     # Dependencies and scripts
 └── .wp-env.json     # WordPress environment configuration
