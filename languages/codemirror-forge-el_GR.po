@@ -88,271 +88,271 @@ msgstr "Αναδίπλωση Κειμένου"
 msgid "Ruler Column"
 msgstr "Στήλη Κανόνα"
 
-#: includes/class-cm-forge-admin.php:210
+#: includes/class-cm-forge-admin.php:222
 msgid "You do not have sufficient permissions to access this page."
 msgstr "Δεν έχετε επαρκή δικαιώματα για πρόσβαση σε αυτή τη σελίδα."
 
-#: includes/class-cm-forge-admin.php:220
+#: includes/class-cm-forge-admin.php:232
 msgid "Choose the theme for the CodeMirror editor."
 msgstr "Επιλέξτε το θέμα για τον επεξεργαστή CodeMirror."
 
-#: includes/class-cm-forge-admin.php:230
+#: includes/class-cm-forge-admin.php:242
 msgid "Default"
 msgstr "Προεπιλογή"
 
-#: includes/class-cm-forge-admin.php:232
+#: includes/class-cm-forge-admin.php:244
 msgid "Dark (Monokai)"
 msgstr "Σκοτεινό (Monokai)"
 
-#: includes/class-cm-forge-admin.php:233
+#: includes/class-cm-forge-admin.php:245
 msgid "Monokai"
 msgstr "Monokai"
 
-#: includes/class-cm-forge-admin.php:234
+#: includes/class-cm-forge-admin.php:246
 msgid "Dracula"
 msgstr "Dracula"
 
-#: includes/class-cm-forge-admin.php:235
+#: includes/class-cm-forge-admin.php:247
 msgid "Material"
 msgstr "Material"
 
-#: includes/class-cm-forge-admin.php:236
+#: includes/class-cm-forge-admin.php:248
 msgid "Material Darker"
 msgstr "Material Darker"
 
-#: includes/class-cm-forge-admin.php:237
+#: includes/class-cm-forge-admin.php:249
 msgid "Material Ocean"
 msgstr "Material Ocean"
 
-#: includes/class-cm-forge-admin.php:238
+#: includes/class-cm-forge-admin.php:250
 msgid "Material Palenight"
 msgstr "Material Palenight"
 
-#: includes/class-cm-forge-admin.php:239
+#: includes/class-cm-forge-admin.php:251
 msgid "Solarized Dark"
 msgstr "Solarized Dark"
 
-#: includes/class-cm-forge-admin.php:240
+#: includes/class-cm-forge-admin.php:252
 msgid "Nord"
 msgstr "Nord"
 
-#: includes/class-cm-forge-admin.php:241
+#: includes/class-cm-forge-admin.php:253
 msgid "GitHub Dark"
 msgstr "GitHub Dark"
 
-#: includes/class-cm-forge-admin.php:242
+#: includes/class-cm-forge-admin.php:254
 msgid "Ambiance"
 msgstr "Ambiance"
 
-#: includes/class-cm-forge-admin.php:243
+#: includes/class-cm-forge-admin.php:255
 msgid "Base16 Dark"
 msgstr "Base16 Dark"
 
-#: includes/class-cm-forge-admin.php:244
+#: includes/class-cm-forge-admin.php:256
 msgid "Blackboard"
 msgstr "Blackboard"
 
-#: includes/class-cm-forge-admin.php:245
+#: includes/class-cm-forge-admin.php:257
 msgid "Cobalt"
 msgstr "Cobalt"
 
-#: includes/class-cm-forge-admin.php:246
+#: includes/class-cm-forge-admin.php:258
 msgid "Erlang Dark"
 msgstr "Erlang Dark"
 
-#: includes/class-cm-forge-admin.php:247
+#: includes/class-cm-forge-admin.php:259
 msgid "Hopscotch"
 msgstr "Hopscotch"
 
-#: includes/class-cm-forge-admin.php:248
+#: includes/class-cm-forge-admin.php:260
 msgid "Lesser Dark"
 msgstr "Lesser Dark"
 
-#: includes/class-cm-forge-admin.php:249
+#: includes/class-cm-forge-admin.php:261
 msgid "MBO"
 msgstr "MBO"
 
-#: includes/class-cm-forge-admin.php:250
+#: includes/class-cm-forge-admin.php:262
 msgid "Midnight"
 msgstr "Midnight"
 
-#: includes/class-cm-forge-admin.php:251
+#: includes/class-cm-forge-admin.php:263
 msgid "Neat"
 msgstr "Neat"
 
-#: includes/class-cm-forge-admin.php:252
+#: includes/class-cm-forge-admin.php:264
 msgid "Night"
 msgstr "Night"
 
-#: includes/class-cm-forge-admin.php:253
+#: includes/class-cm-forge-admin.php:265
 msgid "Oceanic Next"
 msgstr "Oceanic Next"
 
-#: includes/class-cm-forge-admin.php:254
+#: includes/class-cm-forge-admin.php:266
 msgid "Panda Syntax"
 msgstr "Panda Syntax"
 
-#: includes/class-cm-forge-admin.php:255
+#: includes/class-cm-forge-admin.php:267
 msgid "Paraiso Dark"
 msgstr "Paraiso Dark"
 
-#: includes/class-cm-forge-admin.php:256
+#: includes/class-cm-forge-admin.php:268
 msgid "Pastel on Dark"
 msgstr "Pastel on Dark"
 
-#: includes/class-cm-forge-admin.php:257
+#: includes/class-cm-forge-admin.php:269
 msgid "RailsCasts"
 msgstr "RailsCasts"
 
-#: includes/class-cm-forge-admin.php:258
+#: includes/class-cm-forge-admin.php:270
 msgid "Ruby Blue"
 msgstr "Ruby Blue"
 
-#: includes/class-cm-forge-admin.php:259
+#: includes/class-cm-forge-admin.php:271
 msgid "Seti"
 msgstr "Seti"
 
-#: includes/class-cm-forge-admin.php:260
+#: includes/class-cm-forge-admin.php:272
 msgid "The Matrix"
 msgstr "The Matrix"
 
-#: includes/class-cm-forge-admin.php:261
+#: includes/class-cm-forge-admin.php:273
 msgid "Tomorrow Night Bright"
 msgstr "Tomorrow Night Bright"
 
-#: includes/class-cm-forge-admin.php:262
+#: includes/class-cm-forge-admin.php:274
 msgid "Tomorrow Night Eighties"
 msgstr "Tomorrow Night Eighties"
 
-#: includes/class-cm-forge-admin.php:263
+#: includes/class-cm-forge-admin.php:275
 msgid "Twilight"
 msgstr "Twilight"
 
-#: includes/class-cm-forge-admin.php:264
+#: includes/class-cm-forge-admin.php:276
 msgid "Vibrant Ink"
 msgstr "Vibrant Ink"
 
-#: includes/class-cm-forge-admin.php:265
+#: includes/class-cm-forge-admin.php:277
 msgid "XQ Dark"
 msgstr "XQ Dark"
 
-#: includes/class-cm-forge-admin.php:266
+#: includes/class-cm-forge-admin.php:278
 msgid "Yeti"
 msgstr "Yeti"
 
-#: includes/class-cm-forge-admin.php:267
+#: includes/class-cm-forge-admin.php:279
 msgid "Zenburn"
 msgstr "Zenburn"
 
-#: includes/class-cm-forge-admin.php:269
+#: includes/class-cm-forge-admin.php:281
 msgid "Solarized Light"
 msgstr "Solarized Light"
 
-#: includes/class-cm-forge-admin.php:270
+#: includes/class-cm-forge-admin.php:282
 msgid "GitHub Light"
 msgstr "GitHub Light"
 
-#: includes/class-cm-forge-admin.php:271
+#: includes/class-cm-forge-admin.php:283
 msgid "Base16 Light"
 msgstr "Base16 Light"
 
-#: includes/class-cm-forge-admin.php:272
+#: includes/class-cm-forge-admin.php:284
 msgid "Eclipse"
 msgstr "Eclipse"
 
-#: includes/class-cm-forge-admin.php:273
+#: includes/class-cm-forge-admin.php:285
 msgid "Elegant"
 msgstr "Elegant"
 
-#: includes/class-cm-forge-admin.php:274
+#: includes/class-cm-forge-admin.php:286
 msgid "IDEA"
 msgstr "IDEA"
 
-#: includes/class-cm-forge-admin.php:275
+#: includes/class-cm-forge-admin.php:287
 msgid "MD Like"
 msgstr "MD Like"
 
-#: includes/class-cm-forge-admin.php:276
+#: includes/class-cm-forge-admin.php:288
 msgid "XQ Light"
 msgstr "XQ Light"
 
-#: includes/class-cm-forge-admin.php:293
+#: includes/class-cm-forge-admin.php:305
 msgid "Customize font settings for the editor."
 msgstr "Προσαρμόστε τις ρυθμίσεις γραμματοσειράς για τον επεξεργαστή."
 
-#: includes/class-cm-forge-admin.php:304
+#: includes/class-cm-forge-admin.php:316
 msgid "Default (inherit)"
 msgstr "Προεπιλογή (κληρονομικό)"
 
-#: includes/class-cm-forge-admin.php:309
+#: includes/class-cm-forge-admin.php:321
 msgid "Select a font family. Fonts are loaded from Fontsource."
 msgstr "Επιλέξτε μια οικογένεια γραμματοσειράς. Οι γραμματοσειρές φορτώνονται από το Fontsource."
 
-#: includes/class-cm-forge-admin.php:320
+#: includes/class-cm-forge-admin.php:332
 msgid "Thin (100)"
 msgstr "Λεπτό (100)"
 
-#: includes/class-cm-forge-admin.php:321
+#: includes/class-cm-forge-admin.php:333
 msgid "Extra Light (200)"
 msgstr "Εξαιρετικά Λεπτό (200)"
 
-#: includes/class-cm-forge-admin.php:322
+#: includes/class-cm-forge-admin.php:334
 msgid "Light (300)"
 msgstr "Λεπτό (300)"
 
-#: includes/class-cm-forge-admin.php:323
+#: includes/class-cm-forge-admin.php:335
 msgid "Normal (400)"
 msgstr "Κανονικό (400)"
 
-#: includes/class-cm-forge-admin.php:324
+#: includes/class-cm-forge-admin.php:336
 msgid "Medium (500)"
 msgstr "Μέτριο (500)"
 
-#: includes/class-cm-forge-admin.php:325
+#: includes/class-cm-forge-admin.php:337
 msgid "Semi Bold (600)"
 msgstr "Ημι-Έντονο (600)"
 
-#: includes/class-cm-forge-admin.php:326
+#: includes/class-cm-forge-admin.php:338
 msgid "Bold (700)"
 msgstr "Έντονο (700)"
 
-#: includes/class-cm-forge-admin.php:327
+#: includes/class-cm-forge-admin.php:339
 msgid "Extra Bold (800)"
 msgstr "Εξαιρετικά Έντονο (800)"
 
-#: includes/class-cm-forge-admin.php:328
+#: includes/class-cm-forge-admin.php:340
 msgid "Black (900)"
 msgstr "Μαύρο (900)"
 
-#: includes/class-cm-forge-admin.php:338
+#: includes/class-cm-forge-admin.php:350
 msgid "Select font weight"
 msgstr "Επιλέξτε βάρος γραμματοσειράς"
 
-#: includes/class-cm-forge-admin.php:351
+#: includes/class-cm-forge-admin.php:363
 msgid "Font size in pixels (minimum: 10)."
 msgstr "Μέγεθος γραμματοσειράς σε pixels (ελάχιστο: 10)."
 
-#: includes/class-cm-forge-admin.php:364
+#: includes/class-cm-forge-admin.php:376
 msgid "Line height as multiplier (1.5) or with unit (1.5em, 24px). Default: 1.5"
 msgstr "Ύψος γραμμής ως πολλαπλασιαστής (1.5) ή με μονάδα (1.5em, 24px). Προεπιλογή: 1.5"
 
-#: includes/class-cm-forge-admin.php:377
+#: includes/class-cm-forge-admin.php:389
 msgid "Letter spacing in pixels. Can be negative or positive. Default: 0"
 msgstr "Απόσταση γραμμάτων σε pixels. Μπορεί να είναι αρνητική ή θετική. Προεπιλογή: 0"
 
-#: includes/class-cm-forge-admin.php:385
+#: includes/class-cm-forge-admin.php:397
 msgid "Configure display options for the editor."
 msgstr "Ρυθμίστε τις επιλογές εμφάνισης για τον επεξεργαστή."
 
-#: includes/class-cm-forge-admin.php:397
+#: includes/class-cm-forge-admin.php:409
 msgid "Enable line numbers"
 msgstr "Ενεργοποίηση αριθμών γραμμών"
 
-#: includes/class-cm-forge-admin.php:410
+#: includes/class-cm-forge-admin.php:422
 msgid "Enable word wrap"
 msgstr "Ενεργοποίηση αναδίπλωσης κειμένου"
 
-#: includes/class-cm-forge-admin.php:423
+#: includes/class-cm-forge-admin.php:435
 msgid "Show ruler at column (0 to disable). Useful for line length guidelines."
 msgstr "Εμφάνιση κανόνα στη στήλη (0 για απενεργοποίηση). Χρήσιμο για οδηγίες μήκους γραμμής."
 
@@ -371,3 +371,15 @@ msgstr "Προεπισκόπηση των ρυθμίσεων του επεξερ
 #: views/admin-settings.php:31
 msgid "Preview File Type:"
 msgstr "Τύπος Αρχείου Προεπισκόπησης:"
+
+#: includes/class-cm-forge-admin.php:143
+msgid "Highlight Current Line"
+msgstr "Επισήμανση Τρέχουσας Γραμμής"
+
+#: includes/class-cm-forge-admin.php:449
+msgid "Highlight the line where the cursor is located with a subtle background color."
+msgstr "Επισήμανση της γραμμής όπου βρίσκεται ο δρομέας με ένα διακριτικό χρώμα φόντου."
+
+#: includes/class-cm-forge-admin.php:448
+msgid "Enable current line highlighting."
+msgstr "Ενεργοποίηση επισήμανσης τρέχουσας γραμμής."

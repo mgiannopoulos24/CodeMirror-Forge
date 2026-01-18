@@ -84,6 +84,7 @@ class CM_Forge_Editor {
             'lineNumbers' => isset($options['line_numbers']) ? $options['line_numbers'] : true,
             'wordWrap' => isset($options['word_wrap']) ? $options['word_wrap'] : false,
             'rulerColumn' => isset($options['ruler_column']) ? $options['ruler_column'] : 0,
+            'currentLineHighlight' => isset($options['current_line_highlight']) ? $options['current_line_highlight'] : false,
         ));
     }
 

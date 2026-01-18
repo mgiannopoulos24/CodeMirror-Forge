@@ -57,3 +57,104 @@
     pointer-events: none;
     z-index: 10;
 }
+
+/* Current line highlighting */
+.CodeMirror-activeline {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.CodeMirror-activeline-background {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* Dark theme support for current line highlighting */
+.CodeMirror.cm-s-monokai .CodeMirror-activeline,
+.CodeMirror.cm-s-monokai .CodeMirror-activeline-background,
+.CodeMirror.cm-s-dracula .CodeMirror-activeline,
+.CodeMirror.cm-s-dracula .CodeMirror-activeline-background,
+.CodeMirror.cm-s-material .CodeMirror-activeline,
+.CodeMirror.cm-s-material .CodeMirror-activeline-background,
+.CodeMirror.cm-s-material-darker .CodeMirror-activeline,
+.CodeMirror.cm-s-material-darker .CodeMirror-activeline-background,
+.CodeMirror.cm-s-material-ocean .CodeMirror-activeline,
+.CodeMirror.cm-s-material-ocean .CodeMirror-activeline-background,
+.CodeMirror.cm-s-material-palenight .CodeMirror-activeline,
+.CodeMirror.cm-s-material-palenight .CodeMirror-activeline-background,
+.CodeMirror.cm-s-solarized-dark .CodeMirror-activeline,
+.CodeMirror.cm-s-solarized-dark .CodeMirror-activeline-background,
+.CodeMirror.cm-s-nord .CodeMirror-activeline,
+.CodeMirror.cm-s-nord .CodeMirror-activeline-background,
+.CodeMirror.cm-s-github .CodeMirror-activeline,
+.CodeMirror.cm-s-github .CodeMirror-activeline-background,
+.CodeMirror.cm-s-ambiance .CodeMirror-activeline,
+.CodeMirror.cm-s-ambiance .CodeMirror-activeline-background,
+.CodeMirror.cm-s-base16-dark .CodeMirror-activeline,
+.CodeMirror.cm-s-base16-dark .CodeMirror-activeline-background,
+.CodeMirror.cm-s-blackboard .CodeMirror-activeline,
+.CodeMirror.cm-s-blackboard .CodeMirror-activeline-background,
+.CodeMirror.cm-s-cobalt .CodeMirror-activeline,
+.CodeMirror.cm-s-cobalt .CodeMirror-activeline-background,
+.CodeMirror.cm-s-erlang-dark .CodeMirror-activeline,
+.CodeMirror.cm-s-erlang-dark .CodeMirror-activeline-background,
+.CodeMirror.cm-s-hopscotch .CodeMirror-activeline,
+.CodeMirror.cm-s-hopscotch .CodeMirror-activeline-background,
+.CodeMirror.cm-s-lesser-dark .CodeMirror-activeline,
+.CodeMirror.cm-s-lesser-dark .CodeMirror-activeline-background,
+.CodeMirror.cm-s-mbo .CodeMirror-activeline,
+.CodeMirror.cm-s-mbo .CodeMirror-activeline-background,
+.CodeMirror.cm-s-midnight .CodeMirror-activeline,
+.CodeMirror.cm-s-midnight .CodeMirror-activeline-background,
+.CodeMirror.cm-s-neat .CodeMirror-activeline,
+.CodeMirror.cm-s-neat .CodeMirror-activeline-background,
+.CodeMirror.cm-s-night .CodeMirror-activeline,
+.CodeMirror.cm-s-night .CodeMirror-activeline-background,
+.CodeMirror.cm-s-oceanic-next .CodeMirror-activeline,
+.CodeMirror.cm-s-oceanic-next .CodeMirror-activeline-background,
+.CodeMirror.cm-s-panda-syntax .CodeMirror-activeline,
+.CodeMirror.cm-s-panda-syntax .CodeMirror-activeline-background,
+.CodeMirror.cm-s-paraiso-dark .CodeMirror-activeline,
+.CodeMirror.cm-s-paraiso-dark .CodeMirror-activeline-background,
+.CodeMirror.cm-s-pastel-on-dark .CodeMirror-activeline,
+.CodeMirror.cm-s-pastel-on-dark .CodeMirror-activeline-background,
+.CodeMirror.cm-s-railscasts .CodeMirror-activeline,
+.CodeMirror.cm-s-railscasts .CodeMirror-activeline-background,
+.CodeMirror.cm-s-rubyblue .CodeMirror-activeline,
+.CodeMirror.cm-s-rubyblue .CodeMirror-activeline-background,
+.CodeMirror.cm-s-seti .CodeMirror-activeline,
+.CodeMirror.cm-s-seti .CodeMirror-activeline-background,
+.CodeMirror.cm-s-the-matrix .CodeMirror-activeline,
+.CodeMirror.cm-s-the-matrix .CodeMirror-activeline-background,
+.CodeMirror.cm-s-tomorrow-night-bright .CodeMirror-activeline,
+.CodeMirror.cm-s-tomorrow-night-bright .CodeMirror-activeline-background,
+.CodeMirror.cm-s-tomorrow-night-eighties .CodeMirror-activeline,
+.CodeMirror.cm-s-tomorrow-night-eighties .CodeMirror-activeline-background,
+.CodeMirror.cm-s-twilight .CodeMirror-activeline,
+.CodeMirror.cm-s-twilight .CodeMirror-activeline-background,
+.CodeMirror.cm-s-vibrant-ink .CodeMirror-activeline,
+.CodeMirror.cm-s-vibrant-ink .CodeMirror-activeline-background,
+.CodeMirror.cm-s-xq-dark .CodeMirror-activeline,
+.CodeMirror.cm-s-xq-dark .CodeMirror-activeline-background,
+.CodeMirror.cm-s-yeti .CodeMirror-activeline,
+.CodeMirror.cm-s-yeti .CodeMirror-activeline-background,
+.CodeMirror.cm-s-zenburn .CodeMirror-activeline,
+.CodeMirror.cm-s-zenburn .CodeMirror-activeline-background {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+/* Light theme support for current line highlighting */
+.CodeMirror.cm-s-solarized .CodeMirror-activeline,
+.CodeMirror.cm-s-solarized .CodeMirror-activeline-background,
+.CodeMirror.cm-s-base16-light .CodeMirror-activeline,
+.CodeMirror.cm-s-base16-light .CodeMirror-activeline-background,
+.CodeMirror.cm-s-eclipse .CodeMirror-activeline,
+.CodeMirror.cm-s-eclipse .CodeMirror-activeline-background,
+.CodeMirror.cm-s-elegant .CodeMirror-activeline,
+.CodeMirror.cm-s-elegant .CodeMirror-activeline-background,
+.CodeMirror.cm-s-idea .CodeMirror-activeline,
+.CodeMirror.cm-s-idea .CodeMirror-activeline-background,
+.CodeMirror.cm-s-md-like .CodeMirror-activeline,
+.CodeMirror.cm-s-md-like .CodeMirror-activeline-background,
+.CodeMirror.cm-s-xq-light .CodeMirror-activeline,
+.CodeMirror.cm-s-xq-light .CodeMirror-activeline-background {
+    background: rgba(0, 0, 0, 0.05);
+}

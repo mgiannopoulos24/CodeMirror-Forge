@@ -123,6 +123,9 @@
             loadFontPreview(selectedFont, selectedWeight);
         }
 
+        // Initialize help icon tooltips
+        initHelpIcons();
+
         // Update preview editor when any setting changes
         const settingsInputs = [
             fontFamilySelect,
@@ -133,7 +136,8 @@
             document.getElementById('cm_theme'),
             document.getElementById('cm_line_numbers'),
             document.getElementById('cm_word_wrap'),
-            document.getElementById('cm_ruler_column')
+            document.getElementById('cm_ruler_column'),
+            document.getElementById('cm_current_line_highlight')
         ];
 
         settingsInputs.forEach(function(input) {
@@ -182,7 +186,7 @@
                 }, 100);
             }
         } catch (e) {
-            console.warn('Failed to initialize preview editor:', e);
+            // Silently fail if preview editor cannot be initialized
         }
     }
 
@@ -333,7 +337,6 @@
             }
         };
         link.onerror = function() {
-            console.warn('Failed to load theme CSS:', themeFileName);
             // Remove the failed link
             if (link.parentNode) {
                 link.parentNode.removeChild(link);
@@ -364,6 +367,7 @@
         const lineNumbers = document.getElementById('cm_line_numbers') ? document.getElementById('cm_line_numbers').checked : (settings.lineNumbers !== false);
         const wordWrap = document.getElementById('cm_word_wrap') ? document.getElementById('cm_word_wrap').checked : (settings.wordWrap || false);
         const rulerColumn = document.getElementById('cm_ruler_column') ? parseInt(document.getElementById('cm_ruler_column').value) : (settings.rulerColumn || 0);
+        const currentLineHighlight = document.getElementById('cm_current_line_highlight') ? document.getElementById('cm_current_line_highlight').checked : (settings.currentLineHighlight || false);
 
         // Apply theme
         const editorElement = previewEditor.getWrapperElement();
@@ -441,7 +445,7 @@
                     previewEditor.setOption('theme', cm5Themes[theme]);
                     // CodeMirror 5 themes have complete CSS - don't add our classes
                 } catch (e) {
-                    console.warn('CodeMirror theme not available:', e);
+                    // Theme not available, continue with default
                 }
             } else if (customThemes.includes(theme)) {
                 // Custom theme - use our CSS classes
@@ -535,6 +539,15 @@
         } else if (ruler) {
             ruler.remove();
         }
+
+        // Apply current line highlighting
+        if (currentLineHighlight !== undefined) {
+            try {
+                previewEditor.setOption('styleActiveLine', currentLineHighlight);
+            } catch (e) {
+                // Current line highlighting not available
+            }
+        }
     }
 
     function fetchFonts(select) {
@@ -576,7 +589,6 @@
                 }
             })
             .catch(err => {
-                console.error('Failed to fetch font list:', err);
                 const errorOption = document.createElement('option');
                 errorOption.value = '';
                 errorOption.textContent = 'Error loading fonts';
@@ -604,7 +616,7 @@
         baseLink.rel = 'stylesheet';
         baseLink.href = 'https://cdn.jsdelivr.net/npm/@fontsource/' + fontId + '/index.css';
         baseLink.onerror = function() {
-            console.warn('Failed to load base font:', fontFamily);
+            // Font failed to load, continue without it
         };
         document.head.appendChild(baseLink);
 
@@ -617,7 +629,6 @@
             weightLink.href = 'https://cdn.jsdelivr.net/npm/@fontsource/' + fontId + '/' + fontWeight + '.css';
             weightLink.onerror = function() {
                 // If specific weight fails, the base font will handle it via font-synthesis
-                console.warn('Weight ' + fontWeight + ' not available for ' + fontFamily + ', using base font');
             };
             document.head.appendChild(weightLink);
         }
@@ -635,6 +646,28 @@
         if (previewEditor) {
             updatePreviewEditor();
         }
+    }
+
+    function initHelpIcons() {
+        const helpIcons = document.querySelectorAll('.cm-forge-help-icon');
+        
+        helpIcons.forEach(function(icon) {
+            const tooltipText = icon.getAttribute('data-tooltip');
+            if (!tooltipText) {
+                return;
+            }
+
+            // Create tooltip element
+            const tooltip = document.createElement('div');
+            tooltip.className = 'cm-forge-tooltip';
+            tooltip.textContent = tooltipText;
+            icon.appendChild(tooltip);
+
+            // Handle keyboard accessibility
+            icon.setAttribute('tabindex', '0');
+            icon.setAttribute('role', 'button');
+            icon.setAttribute('aria-label', tooltipText);
+        });
     }
 })();
 

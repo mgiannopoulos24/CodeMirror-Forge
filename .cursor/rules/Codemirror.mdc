@@ -85,6 +85,39 @@ When adding new editor customizations:
 - **Bug fix only** → PATCH version (1.0.1)
 - **Breaking change** → MAJOR version (2.0.0)
 
+### Version Number Updates
+**MANDATORY**: After updating CHANGELOG.md with a new version, you MUST update the version number in ALL of the following files:
+
+1. **`codemirror-forge.php`**:
+   - Update `* Version: X.X.X` in the plugin header (line 6)
+   - Update `define('CM_FORGE_VERSION', 'X.X.X');` constant (line 20)
+   - Both must match the version in CHANGELOG.md
+
+2. **`package.json`**:
+   - Update `"version": "X.X.X"` field (line 3)
+   - Must match the version in CHANGELOG.md
+
+3. **Translation files** (automatic):
+   - POT file version is automatically updated by the i18n script when you run `bun run i18n:lang <locale> all`
+   - No manual update needed for translation files
+
+**Important**: All version numbers must be identical across all files and match the version in CHANGELOG.md.
+
+### Translation Updates
+**MANDATORY**: After adding new translatable strings (using `__()`, `esc_html__()`, `esc_html_e()`, etc.), you MUST update translation files:
+
+1. **NEVER manually edit** `.pot`, `.po`, or `.mo` files directly
+2. **ALWAYS use** the i18n script: `bun run i18n:lang <locale> all`
+3. **Update all languages** that have translations:
+   - For Greek: `bun run i18n:lang el_GR all`
+   - For English (US): `bun run i18n:lang en_US all`
+4. **Requirements**: wp-env must be running (`bun run start`) before running i18n scripts
+5. The script will:
+   - Generate/update POT template from source code
+   - Update PO files with new strings
+   - Compile MO files from PO files
+6. **Translation workflow**: The script automatically extracts all translatable strings from PHP files and updates translation files accordingly
+
 ## Code Style
 
 ### PHP

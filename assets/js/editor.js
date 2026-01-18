@@ -90,7 +90,6 @@
         link.rel = 'stylesheet';
         link.href = 'https://cdn.jsdelivr.net/npm/codemirror@5.65.16/theme/' + themeFileName + '.css';
         link.onerror = function() {
-            console.warn('Failed to load theme CSS:', themeFileName);
             if (link.parentNode) {
                 link.parentNode.removeChild(link);
             }
@@ -175,7 +174,7 @@
                     editorElement.classList.add('cm-theme-' + settings.theme);
                 }
             } catch (e) {
-                console.warn('Could not apply theme:', e);
+                // Theme not available, continue with default
             }
         }
 
@@ -262,13 +261,22 @@
                 ruler.style.left = rulerPosition + 'px';
                 ruler.setAttribute('data-column', settings.rulerColumn);
             } catch (e) {
-                console.warn('Could not apply ruler:', e);
+                // Ruler not available
             }
         } else {
             // Remove ruler if disabled
             const ruler = editorElement.querySelector('.cm-forge-ruler');
             if (ruler) {
                 ruler.remove();
+            }
+        }
+
+        // Apply current line highlighting
+        if (settings.currentLineHighlight !== undefined) {
+            try {
+                cm.setOption('styleActiveLine', settings.currentLineHighlight);
+            } catch (e) {
+                // Current line highlighting not available
             }
         }
     }

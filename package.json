@@ -1,6 +1,6 @@
 {
   "name": "codemirror-forge",
-  "version": "1.2.0",
+  "version": "1.3.0",
   "description": "WordPress plugin for customizing CodeMirror editor",
   "author": "Marios Giannopoulos",
   "license": "GPL-3",
@@ -30,7 +30,7 @@
     "install": "^0.13.0"
   },
   "devDependencies": {
-    "@wordpress/env": "^10.37.0",
+    "@wordpress/env": "^10.38.0",
     "bestzip": "^2.2.1"
   }
 }

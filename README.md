@@ -20,10 +20,11 @@ CodeMirror Forge provides powerful customization options for WordPress CodeMirro
   - Enhanced gutter spacing for better readability
   - Enable/disable word wrap
   - Set ruler column for line length guidelines
+  - Highlight current line with subtle background color
 - **Internationalization (i18n)**: Full translation support with Greek (el_GR) included and ready for additional languages
 - **Live Preview**: Real-time preview editor that updates instantly as you change settings
 - **Sample Code Preview**: Test your settings with sample JavaScript, PHP, CSS, HTML, and JSON files
-- **Easy Settings**: Intuitive admin interface for configuring all options
+- **Easy Settings**: Intuitive admin interface with help icon tooltips for all options
 - **Universal Application**: Settings apply to all CodeMirror editors throughout WordPress
 - **Dynamic Theme Loading**: Themes are automatically loaded from CDN when selected
 - **Lightweight**: Minimal overhead with vanilla JavaScript implementation
@@ -98,6 +99,7 @@ This will start a WordPress instance at `http://localhost:8888`
    - **Line Numbers**: Toggle line number display
    - **Word Wrap**: Enable or disable word wrapping
    - **Ruler Column**: Set a column guide for line length (0 to disable)
+   - **Highlight Current Line**: Enable highlighting of the line where the cursor is located
 3. Use the **Live Preview** section to see your changes in real-time
 4. Test different file types (JavaScript, PHP, CSS, HTML, JSON) in the preview
 5. Click **Save Settings** to apply your customizations

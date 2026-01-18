@@ -88,271 +88,271 @@ msgstr ""
 msgid "Ruler Column"
 msgstr ""
 
-#: includes/class-cm-forge-admin.php:210
+#: includes/class-cm-forge-admin.php:222
 msgid "You do not have sufficient permissions to access this page."
 msgstr ""
 
-#: includes/class-cm-forge-admin.php:220
+#: includes/class-cm-forge-admin.php:232
 msgid "Choose the theme for the CodeMirror editor."
 msgstr ""
 
-#: includes/class-cm-forge-admin.php:230
+#: includes/class-cm-forge-admin.php:242
 msgid "Default"
 msgstr ""
 
-#: includes/class-cm-forge-admin.php:232
+#: includes/class-cm-forge-admin.php:244
 msgid "Dark (Monokai)"
 msgstr ""
 
-#: includes/class-cm-forge-admin.php:233
+#: includes/class-cm-forge-admin.php:245
 msgid "Monokai"
 msgstr ""
 
-#: includes/class-cm-forge-admin.php:234
+#: includes/class-cm-forge-admin.php:246
 msgid "Dracula"
 msgstr ""
 
-#: includes/class-cm-forge-admin.php:235
+#: includes/class-cm-forge-admin.php:247
 msgid "Material"
 msgstr ""
 
-#: includes/class-cm-forge-admin.php:236
+#: includes/class-cm-forge-admin.php:248
 msgid "Material Darker"
 msgstr ""
 
-#: includes/class-cm-forge-admin.php:237
+#: includes/class-cm-forge-admin.php:249
 msgid "Material Ocean"
 msgstr ""
 
-#: includes/class-cm-forge-admin.php:238
+#: includes/class-cm-forge-admin.php:250
 msgid "Material Palenight"
 msgstr ""
 
-#: includes/class-cm-forge-admin.php:239
+#: includes/class-cm-forge-admin.php:251
 msgid "Solarized Dark"
 msgstr ""
 
-#: includes/class-cm-forge-admin.php:240
+#: includes/class-cm-forge-admin.php:252
 msgid "Nord"
 msgstr ""
 
-#: includes/class-cm-forge-admin.php:241
+#: includes/class-cm-forge-admin.php:253
 msgid "GitHub Dark"
 msgstr ""
 
-#: includes/class-cm-forge-admin.php:242
+#: includes/class-cm-forge-admin.php:254
 msgid "Ambiance"
 msgstr ""
 
-#: includes/class-cm-forge-admin.php:243
+#: includes/class-cm-forge-admin.php:255
 msgid "Base16 Dark"
 msgstr ""
 
-#: includes/class-cm-forge-admin.php:244
+#: includes/class-cm-forge-admin.php:256
 msgid "Blackboard"
 msgstr ""
 
-#: includes/class-cm-forge-admin.php:245
+#: includes/class-cm-forge-admin.php:257
 msgid "Cobalt"
 msgstr ""
 
-#: includes/class-cm-forge-admin.php:246
+#: includes/class-cm-forge-admin.php:258
 msgid "Erlang Dark"
 msgstr ""
 
-#: includes/class-cm-forge-admin.php:247
+#: includes/class-cm-forge-admin.php:259
 msgid "Hopscotch"
 msgstr ""
 
-#: includes/class-cm-forge-admin.php:248
+#: includes/class-cm-forge-admin.php:260
 msgid "Lesser Dark"
 msgstr ""
 
-#: includes/class-cm-forge-admin.php:249
+#: includes/class-cm-forge-admin.php:261
 msgid "MBO"
 msgstr ""
 
-#: includes/class-cm-forge-admin.php:250
+#: includes/class-cm-forge-admin.php:262
 msgid "Midnight"
 msgstr ""
 
-#: includes/class-cm-forge-admin.php:251
+#: includes/class-cm-forge-admin.php:263
 msgid "Neat"
 msgstr ""
 
-#: includes/class-cm-forge-admin.php:252
+#: includes/class-cm-forge-admin.php:264
 msgid "Night"
 msgstr ""
 
-#: includes/class-cm-forge-admin.php:253
+#: includes/class-cm-forge-admin.php:265
 msgid "Oceanic Next"
 msgstr ""
 
-#: includes/class-cm-forge-admin.php:254
+#: includes/class-cm-forge-admin.php:266
 msgid "Panda Syntax"
 msgstr ""
 
-#: includes/class-cm-forge-admin.php:255
+#: includes/class-cm-forge-admin.php:267
 msgid "Paraiso Dark"
 msgstr ""
 
-#: includes/class-cm-forge-admin.php:256
+#: includes/class-cm-forge-admin.php:268
 msgid "Pastel on Dark"
 msgstr ""
 
-#: includes/class-cm-forge-admin.php:257
+#: includes/class-cm-forge-admin.php:269
 msgid "RailsCasts"
 msgstr ""
 
-#: includes/class-cm-forge-admin.php:258
+#: includes/class-cm-forge-admin.php:270
 msgid "Ruby Blue"
 msgstr ""
 
-#: includes/class-cm-forge-admin.php:259
+#: includes/class-cm-forge-admin.php:271
 msgid "Seti"
 msgstr ""
 
-#: includes/class-cm-forge-admin.php:260
+#: includes/class-cm-forge-admin.php:272
 msgid "The Matrix"
 msgstr ""
 
-#: includes/class-cm-forge-admin.php:261
+#: includes/class-cm-forge-admin.php:273
 msgid "Tomorrow Night Bright"
 msgstr ""
 
-#: includes/class-cm-forge-admin.php:262
+#: includes/class-cm-forge-admin.php:274
 msgid "Tomorrow Night Eighties"
 msgstr ""
 
-#: includes/class-cm-forge-admin.php:263
+#: includes/class-cm-forge-admin.php:275
 msgid "Twilight"
 msgstr ""
 
-#: includes/class-cm-forge-admin.php:264
+#: includes/class-cm-forge-admin.php:276
 msgid "Vibrant Ink"
 msgstr ""
 
-#: includes/class-cm-forge-admin.php:265
+#: includes/class-cm-forge-admin.php:277
 msgid "XQ Dark"
 msgstr ""
 
-#: includes/class-cm-forge-admin.php:266
+#: includes/class-cm-forge-admin.php:278
 msgid "Yeti"
 msgstr ""
 
-#: includes/class-cm-forge-admin.php:267
+#: includes/class-cm-forge-admin.php:279
 msgid "Zenburn"
 msgstr ""
 
-#: includes/class-cm-forge-admin.php:269
+#: includes/class-cm-forge-admin.php:281
 msgid "Solarized Light"
 msgstr ""
 
-#: includes/class-cm-forge-admin.php:270
+#: includes/class-cm-forge-admin.php:282
 msgid "GitHub Light"
 msgstr ""
 
-#: includes/class-cm-forge-admin.php:271
+#: includes/class-cm-forge-admin.php:283
 msgid "Base16 Light"
 msgstr ""
 
-#: includes/class-cm-forge-admin.php:272
+#: includes/class-cm-forge-admin.php:284
 msgid "Eclipse"
 msgstr ""
 
-#: includes/class-cm-forge-admin.php:273
+#: includes/class-cm-forge-admin.php:285
 msgid "Elegant"
 msgstr ""
 
-#: includes/class-cm-forge-admin.php:274
+#: includes/class-cm-forge-admin.php:286
 msgid "IDEA"
 msgstr ""
 
-#: includes/class-cm-forge-admin.php:275
+#: includes/class-cm-forge-admin.php:287
 msgid "MD Like"
 msgstr ""
 
-#: includes/class-cm-forge-admin.php:276
+#: includes/class-cm-forge-admin.php:288
 msgid "XQ Light"
 msgstr ""
 
-#: includes/class-cm-forge-admin.php:293
+#: includes/class-cm-forge-admin.php:305
 msgid "Customize font settings for the editor."
 msgstr ""
 
-#: includes/class-cm-forge-admin.php:304
+#: includes/class-cm-forge-admin.php:316
 msgid "Default (inherit)"
 msgstr ""
 
-#: includes/class-cm-forge-admin.php:309
+#: includes/class-cm-forge-admin.php:321
 msgid "Select a font family. Fonts are loaded from Fontsource."
 msgstr ""
 
-#: includes/class-cm-forge-admin.php:320
+#: includes/class-cm-forge-admin.php:332
 msgid "Thin (100)"
 msgstr ""
 
-#: includes/class-cm-forge-admin.php:321
+#: includes/class-cm-forge-admin.php:333
 msgid "Extra Light (200)"
 msgstr ""
 
-#: includes/class-cm-forge-admin.php:322
+#: includes/class-cm-forge-admin.php:334
 msgid "Light (300)"
 msgstr ""
 
-#: includes/class-cm-forge-admin.php:323
+#: includes/class-cm-forge-admin.php:335
 msgid "Normal (400)"
 msgstr ""
 
-#: includes/class-cm-forge-admin.php:324
+#: includes/class-cm-forge-admin.php:336
 msgid "Medium (500)"
 msgstr ""
 
-#: includes/class-cm-forge-admin.php:325
+#: includes/class-cm-forge-admin.php:337
 msgid "Semi Bold (600)"
 msgstr ""
 
-#: includes/class-cm-forge-admin.php:326
+#: includes/class-cm-forge-admin.php:338
 msgid "Bold (700)"
 msgstr ""
 
-#: includes/class-cm-forge-admin.php:327
+#: includes/class-cm-forge-admin.php:339
 msgid "Extra Bold (800)"
 msgstr ""
 
-#: includes/class-cm-forge-admin.php:328
+#: includes/class-cm-forge-admin.php:340
 msgid "Black (900)"
 msgstr ""
 
-#: includes/class-cm-forge-admin.php:338
+#: includes/class-cm-forge-admin.php:350
 msgid "Select font weight"
 msgstr ""
 
-#: includes/class-cm-forge-admin.php:351
+#: includes/class-cm-forge-admin.php:363
 msgid "Font size in pixels (minimum: 10)."
 msgstr ""
 
-#: includes/class-cm-forge-admin.php:364
+#: includes/class-cm-forge-admin.php:376
 msgid "Line height as multiplier (1.5) or with unit (1.5em, 24px). Default: 1.5"
 msgstr ""
 
-#: includes/class-cm-forge-admin.php:377
+#: includes/class-cm-forge-admin.php:389
 msgid "Letter spacing in pixels. Can be negative or positive. Default: 0"
 msgstr ""
 
-#: includes/class-cm-forge-admin.php:385
+#: includes/class-cm-forge-admin.php:397
 msgid "Configure display options for the editor."
 msgstr ""
 
-#: includes/class-cm-forge-admin.php:397
+#: includes/class-cm-forge-admin.php:409
 msgid "Enable line numbers"
 msgstr ""
 
-#: includes/class-cm-forge-admin.php:410
+#: includes/class-cm-forge-admin.php:422
 msgid "Enable word wrap"
 msgstr ""
 
-#: includes/class-cm-forge-admin.php:423
+#: includes/class-cm-forge-admin.php:435
 msgid "Show ruler at column (0 to disable). Useful for line length guidelines."
 msgstr ""
 
@@ -370,4 +370,16 @@ msgstr ""
 
 #: views/admin-settings.php:31
 msgid "Preview File Type:"
+msgstr ""
+
+#: includes/class-cm-forge-admin.php:143
+msgid "Highlight Current Line"
+msgstr ""
+
+#: includes/class-cm-forge-admin.php:449
+msgid "Highlight the line where the cursor is located with a subtle background color."
+msgstr ""
+
+#: includes/class-cm-forge-admin.php:448
+msgid "Enable current line highlighting."
 msgstr ""

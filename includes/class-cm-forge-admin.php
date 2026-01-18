@@ -137,6 +137,14 @@ class CM_Forge_Admin {
             'codemirror-forge',
             'cm_forge_display_section'
         );
+
+        add_settings_field(
+            'current_line_highlight',
+            __('Highlight Current Line', 'codemirror-forge'),
+            array($this, 'render_current_line_highlight_field'),
+            'codemirror-forge',
+            'cm_forge_display_section'
+        );
     }
 
     /**
@@ -196,6 +204,10 @@ class CM_Forge_Admin {
 
         if (isset($input['word_wrap'])) {
             $sanitized['word_wrap'] = !empty($input['word_wrap']);
+        }
+
+        if (isset($input['current_line_highlight'])) {
+            $sanitized['current_line_highlight'] = !empty($input['current_line_highlight']);
         }
 
         return $sanitized;
@@ -306,7 +318,7 @@ class CM_Forge_Admin {
                 <option value="<?php echo esc_attr($font_family); ?>" selected><?php echo esc_html($font_family); ?></option>
             <?php endif; ?>
         </select>
-        <span class="description"><?php esc_html_e('Select a font family. Fonts are loaded from Fontsource.', 'codemirror-forge'); ?></span>
+        <?php $this->render_help_icon(__('Select a font family. Fonts are loaded from Fontsource.', 'codemirror-forge')); ?>
         <?php
     }
 
@@ -335,7 +347,7 @@ class CM_Forge_Admin {
                 </option>
             <?php endforeach; ?>
         </select>
-        <span class="description"><?php esc_html_e('Select font weight', 'codemirror-forge'); ?></span>
+        <?php $this->render_help_icon(__('Select font weight', 'codemirror-forge')); ?>
         <?php
     }
 
@@ -348,7 +360,7 @@ class CM_Forge_Admin {
         ?>
         <input type="number" name="cm_forge_options[font_size]" id="cm_font_size" 
                value="<?php echo esc_attr($font_size); ?>" min="10" step="1">
-        <span class="description"><?php esc_html_e('Font size in pixels (minimum: 10).', 'codemirror-forge'); ?></span>
+        <?php $this->render_help_icon(__('Font size in pixels (minimum: 10).', 'codemirror-forge')); ?>
         <?php
     }
 
@@ -361,7 +373,7 @@ class CM_Forge_Admin {
         ?>
         <input type="text" name="cm_forge_options[line_height]" id="cm_line_height" 
                value="<?php echo esc_attr($line_height); ?>" placeholder="1.5 or 1.5em or 24px">
-        <span class="description"><?php esc_html_e('Line height as multiplier (1.5) or with unit (1.5em, 24px). Default: 1.5', 'codemirror-forge'); ?></span>
+        <?php $this->render_help_icon(__('Line height as multiplier (1.5) or with unit (1.5em, 24px). Default: 1.5', 'codemirror-forge')); ?>
         <?php
     }
 
@@ -374,7 +386,7 @@ class CM_Forge_Admin {
         ?>
         <input type="number" name="cm_forge_options[letter_spacing]" id="cm_letter_spacing" 
                value="<?php echo esc_attr($letter_spacing); ?>" step="0.1" min="-5" max="10">
-        <span class="description"><?php esc_html_e('Letter spacing in pixels. Can be negative or positive. Default: 0', 'codemirror-forge'); ?></span>
+        <?php $this->render_help_icon(__('Letter spacing in pixels. Can be negative or positive. Default: 0', 'codemirror-forge')); ?>
         <?php
     }
 
@@ -420,7 +432,34 @@ class CM_Forge_Admin {
         ?>
         <input type="number" name="cm_forge_options[ruler_column]" id="cm_ruler_column" 
                value="<?php echo esc_attr($ruler_column); ?>" min="0" max="200" step="1">
-        <span class="description"><?php esc_html_e('Show ruler at column (0 to disable). Useful for line length guidelines.', 'codemirror-forge'); ?></span>
+        <?php $this->render_help_icon(__('Show ruler at column (0 to disable). Useful for line length guidelines.', 'codemirror-forge')); ?>
+        <?php
+    }
+
+    /**
+     * Render current line highlight field
+     */
+    public function render_current_line_highlight_field() {
+        $options = get_option('cm_forge_options', array());
+        $current_line_highlight = isset($options['current_line_highlight']) ? $options['current_line_highlight'] : false;
+        ?>
+        <input type="checkbox" name="cm_forge_options[current_line_highlight]" id="cm_current_line_highlight" 
+               value="1" <?php checked($current_line_highlight, true); ?>>
+        <label for="cm_current_line_highlight"><?php esc_html_e('Enable current line highlighting.', 'codemirror-forge'); ?></label>
+        <?php $this->render_help_icon(__('Highlight the line where the cursor is located with a subtle background color.', 'codemirror-forge')); ?>
+        <?php
+    }
+
+    /**
+     * Render help icon with tooltip
+     *
+     * @param string $text Help text to display in tooltip
+     */
+    private function render_help_icon($text) {
+        ?>
+        <span class="cm-forge-help-icon" data-tooltip="<?php echo esc_attr($text); ?>" aria-label="<?php echo esc_attr($text); ?>">
+            <span class="cm-forge-help-icon-inner">?</span>
+        </span>
         <?php
     }
 
@@ -499,6 +538,7 @@ class CM_Forge_Admin {
             'lineNumbers' => isset($options['line_numbers']) ? $options['line_numbers'] : true,
             'wordWrap' => isset($options['word_wrap']) ? $options['word_wrap'] : false,
             'rulerColumn' => isset($options['ruler_column']) ? $options['ruler_column'] : 0,
+            'currentLineHighlight' => isset($options['current_line_highlight']) ? $options['current_line_highlight'] : false,
             'pluginUrl' => CM_FORGE_PLUGIN_URL,
             'sampleFiles' => $sample_files,
         ));

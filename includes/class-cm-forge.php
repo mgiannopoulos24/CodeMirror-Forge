@@ -76,29 +76,50 @@ class CM_Forge {
         $domain = 'codemirror-forge';
         $locale = apply_filters('plugin_locale', determine_locale(), $domain);
         
-        // Load from plugin languages directory
-        $mofile = CM_FORGE_PLUGIN_DIR . 'languages/' . $domain . '-' . $locale . '.mo';
-        
-        // Try loading with specific locale first
-        if (file_exists($mofile)) {
-            load_textdomain($domain, $mofile);
-        }
-        
-        // Fallback: try without country code (e.g., el instead of el_GR)
-        if (strpos($locale, '_') !== false) {
-            $locale_fallback = explode('_', $locale)[0];
-            $mofile_fallback = CM_FORGE_PLUGIN_DIR . 'languages/' . $domain . '-' . $locale_fallback . '.mo';
-            if (file_exists($mofile_fallback) && !is_textdomain_loaded($domain)) {
-                load_textdomain($domain, $mofile_fallback);
-            }
-        }
-        
-        // Also use standard WordPress function as additional fallback
+        // Use standard WordPress function first - it handles path resolution automatically
         load_plugin_textdomain(
             $domain,
             false,
             dirname(CM_FORGE_PLUGIN_BASENAME) . '/languages'
         );
+        
+        // Additional manual loading for better compatibility
+        $mofile = CM_FORGE_PLUGIN_DIR . 'languages/' . $domain . '-' . $locale . '.mo';
+        
+        // Try loading with specific locale
+        if (file_exists($mofile)) {
+            load_textdomain($domain, $mofile);
+        }
+        
+        // If locale doesn't have country code, try common variants
+        // e.g., if locale is "el", try "el_GR"
+        if (strpos($locale, '_') === false) {
+            $common_variants = array(
+                'el' => 'el_GR',  // Greek
+                'en' => 'en_US',  // English
+                'es' => 'es_ES',  // Spanish
+                'fr' => 'fr_FR',  // French
+                'de' => 'de_DE',  // German
+                'it' => 'it_IT',  // Italian
+                'pt' => 'pt_PT',  // Portuguese
+            );
+            
+            if (isset($common_variants[$locale])) {
+                $variant_locale = $common_variants[$locale];
+                $variant_mofile = CM_FORGE_PLUGIN_DIR . 'languages/' . $domain . '-' . $variant_locale . '.mo';
+                if (file_exists($variant_mofile)) {
+                    load_textdomain($domain, $variant_mofile);
+                }
+            }
+        } else {
+            // Fallback: try without country code (e.g., el_GR -> el)
+            $locale_fallback = explode('_', $locale)[0];
+            $mofile_fallback = CM_FORGE_PLUGIN_DIR . 'languages/' . $domain . '-' . $locale_fallback . '.mo';
+            if (file_exists($mofile_fallback)) {
+                load_textdomain($domain, $mofile_fallback);
+            }
+        }
     }
+    
 }
 
