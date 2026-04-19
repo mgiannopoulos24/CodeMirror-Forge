@@ -70,26 +70,27 @@ class CM_Forge_Editor {
 			/**
 			 * Load base font (index.css includes common weights like 400, 700)
 			 */
-			// phpcs: disable
+			// phpcs:disable PluginCheck.CodeAnalysis.EnqueuedResourceOffloading.OffloadedContent
 			wp_enqueue_style(
 				'cm-forge-font-' . $font_id . '-base',
 				'https://cdn.jsdelivr.net/npm/@fontsource/' . $font_id . '/index.css',
 				array(),
 				'all'
 			);
-			// phpcs: enable
+			// phpcs:enable PluginCheck.CodeAnalysis.EnqueuedResourceOffloading.OffloadedContent
+
 			/**
 			 * Load specific weight if it's not a common one (400, 700 are usually in index.css)
 			 */
-			if ( '400' !== $font_weight && '700' !== $font_weight ) { 
-				// phpcs: disable
+			if ( '400' !== $font_weight && '700' !== $font_weight ) {
+				// phpcs:disable PluginCheck.CodeAnalysis.EnqueuedResourceOffloading.OffloadedContent
 				wp_enqueue_style(
 					'cm-forge-font-' . $font_id . '-' . $font_weight,
 					'https://cdn.jsdelivr.net/npm/@fontsource/' . $font_id . '/' . $font_weight . '.css',
 					array( 'cm-forge-font-' . $font_id . '-base' ),
 					'all'
 				);
-				// phpcs: enable
+				// phpcs:enable PluginCheck.CodeAnalysis.EnqueuedResourceOffloading.OffloadedContent
 			}
 		}
 
