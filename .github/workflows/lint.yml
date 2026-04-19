@@ -26,6 +26,11 @@ jobs:
         with:
           php-version: '8.2'
       
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: latest
+      
       - name: Install dependencies
         run: bun install
       
@@ -34,4 +39,3 @@ jobs:
       
       - name: Run PHP linting
         run: bun run lint
-
