@@ -154,6 +154,8 @@ class CM_Forge_Admin {
      * @return array Sanitized settings
      */
     public function sanitize_settings($input) {
+        check_admin_referer('cm_forge_settings', 'cm_forge_settings_nonce');
+
         $sanitized = array();
 
         if (isset($input['theme'])) {
