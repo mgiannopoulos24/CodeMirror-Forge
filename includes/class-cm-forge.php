@@ -85,11 +85,14 @@ class CM_Forge {
 	 */
 	public function load_textdomain() {
 		$domain = 'codemirror-forge';
+
+		// phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedHooknameFound -- This is a filter hook.
 		$locale = apply_filters( 'plugin_locale', determine_locale(), $domain );
 
 		/**
 		 * Use standard WordPress function first - it handles path resolution automatically
 		 */
+		// phpcs:ignore PluginCheck.CodeAnalysis.DiscouragedFunctions.load_plugin_textdomainFound -- This is a WordPress function.
 		load_plugin_textdomain(
 			$domain,
 			false,

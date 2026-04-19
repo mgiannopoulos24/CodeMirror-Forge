@@ -70,6 +70,7 @@ class CM_Forge_Editor {
 			/**
 			 * Load base font (index.css includes common weights like 400, 700)
 			 */
+			// phpcs:ignore WordPress.WP.EnqueuedResourceParameters.NotInFooter.
 			wp_enqueue_style(
 				'cm-forge-font-' . $font_id . '-base',
 				'https://cdn.jsdelivr.net/npm/@fontsource/' . $font_id . '/index.css',
@@ -80,7 +81,7 @@ class CM_Forge_Editor {
 			/**
 			 * Load specific weight if it's not a common one (400, 700 are usually in index.css)
 			 */
-			if ( '400' !== $font_weight && '700' !== $font_weight ) {
+			if ( '400' !== $font_weight && '700' !== $font_weight ) { // phpcs:ignore PluginCheck.CodeAnalysis.EnqueuedResourceOffloading.OffloadedContent -- This is a font weight.
 				wp_enqueue_style(
 					'cm-forge-font-' . $font_id . '-' . $font_weight,
 					'https://cdn.jsdelivr.net/npm/@fontsource/' . $font_id . '/' . $font_weight . '.css',
