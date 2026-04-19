@@ -2,6 +2,11 @@
 
 A WordPress plugin that expands your CodeMirror editor capabilities. Customize themes, fonts, and display options to forge your perfect editing experience.
 
+## What's New (1.3.1)
+
+- Added uninstall.php for proper cleanup when plugin is uninstalled
+- Added validation for font weight to only allow values 100-900
+
 ## Description
 
 CodeMirror Forge provides powerful customization options for WordPress CodeMirror editors, making it easy to personalize your code editing experience. Instead of using default editor settings, you can customize themes, font sizes, line numbers, and word wrapping across all CodeMirror instances in WordPress.
@@ -25,6 +30,7 @@ CodeMirror Forge provides powerful customization options for WordPress CodeMirro
 - **Live Preview**: Real-time preview editor that updates instantly as you change settings
 - **Sample Code Preview**: Test your settings with sample JavaScript, PHP, CSS, HTML, and JSON files
 - **Easy Settings**: Intuitive admin interface with help icon tooltips for all options
+- **Clean Uninstall**: Removes all plugin data when uninstalled
 - **Universal Application**: Settings apply to all CodeMirror editors throughout WordPress
 - **Dynamic Theme Loading**: Themes are automatically loaded from CDN when selected
 - **Lightweight**: Minimal overhead with vanilla JavaScript implementation

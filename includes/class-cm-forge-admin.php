@@ -165,7 +165,10 @@ class CM_Forge_Admin {
         }
 
         if (isset($input['font_weight'])) {
-            $sanitized['font_weight'] = sanitize_text_field($input['font_weight']);
+            $font_weight = sanitize_text_field($input['font_weight']);
+            if (in_array($font_weight, array('100', '200', '300', '400', '500', '600', '700', '800', '900'), true)) {
+                $sanitized['font_weight'] = $font_weight;
+            }
         }
 
         if (isset($input['font_size'])) {

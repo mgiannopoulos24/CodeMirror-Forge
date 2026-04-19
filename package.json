@@ -1,9 +1,10 @@
 {
   "name": "codemirror-forge",
-  "version": "1.3.0",
+  "version": "1.3.1",
   "description": "WordPress plugin for customizing CodeMirror editor",
   "author": "Marios Giannopoulos",
   "license": "GPL-3",
+  "keywords": ["wordpress", "plugin", "codemirror", "code-editor", "theme", "fonts", "customize", "editor", "syntax-highlighting"],
   "repository": {
     "type": "git",
     "url": "https://github.com/mgiannopoulos24/codemirror-forge"
@@ -13,14 +14,14 @@
     "stop": "wp-env stop",
     "destroy": "wp-env destroy",
     "shell": "wp-env run cli /bin/bash",
-    "bundle": "bunx bestzip codemirror-forge.zip codemirror-forge.php includes/ views/ assets/",
+    "bundle": "bunx bestzip codemirror-forge.zip codemirror-forge.php includes/ views/ assets/ languages/ uninstall.php readme.txt",
     "lint": "phplint '*.php' 'includes/**/*.php' 'views/**/*.php'",
     "i18n:lang": "./scripts/i18n-lang.sh"
   },
   "dependencies": {
     "@codemirror/basic-setup": "^0.20.0",
-    "@codemirror/commands": "^6.10.1",
-    "@codemirror/lang-javascript": "^6.2.4",
+    "@codemirror/commands": "^6.10.3",
+    "@codemirror/lang-javascript": "^6.2.5",
     "@codemirror/lang-php": "^6.0.2",
     "@codemirror/lang-css": "^6.3.1",
     "@codemirror/lang-html": "^6.4.11",
@@ -30,7 +31,7 @@
     "install": "^0.13.0"
   },
   "devDependencies": {
-    "@wordpress/env": "^10.38.0",
-    "bestzip": "^2.2.1"
+    "@wordpress/env": "^10.39.0",
+    "bestzip": "^2.2.3"
   }
 }
