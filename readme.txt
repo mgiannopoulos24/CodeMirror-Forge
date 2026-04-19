@@ -2,7 +2,7 @@
 Contributors: mgiannopoulos24
 Tags: codemirror, editor, theme, customize, font
 Requires at least: 5.0
-Tested up to: 6.9.4
+Tested up to: 6.9
 Stable tag: 1.3.2
 Requires PHP: 7.4
 License: GPL v3 or later
