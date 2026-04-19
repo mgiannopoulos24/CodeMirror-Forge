@@ -3,7 +3,7 @@ Contributors: mgiannopoulos24
 Tags: codemirror, editor, theme, customize, font
 Requires at least: 5.0
 Tested up to: 6.9
-Stable tag: 1.3.2
+Stable tag: 1.3.3
 Requires PHP: 7.4
 License: GPL v3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
@@ -29,6 +29,10 @@ CodeMirror Forge provides powerful customization options for WordPress CodeMirro
 3. Navigate to Settings > CodeMirror Forge to configure your preferences
 
 == Changelog ==
+
+= 1.3.3 =
+* Full codebase refactoring to follow WordPress PHP coding standards
+* Added proper PHPDoc comments for all classes and methods
 
 = 1.3.2 =
 * Added nonce verification for improved security

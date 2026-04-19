@@ -1,0 +1,23 @@
+{
+    "name": "mgiannopoulos24/codemirror-forge",
+    "description": "Forge your perfect CodeMirror editor experience. Customize themes, fonts, and display options for all CodeMirror instances in WordPress.",
+    "type": "wordpress-plugin",
+    "require": {
+        "wp-coding-standards/wpcs": "^3.0"
+    },
+    "require-dev": {
+        "squizlabs/php_codesniffer": "^3.7"
+    },
+    "license": "GPL-3",
+    "authors": [
+        {
+            "name": "mgiannopoulos24"
+        }
+    ],
+    "minimum-stability": "stable",
+    "config": {
+        "allow-plugins": {
+            "dealerdirect/phpcodesniffer-composer-installer": true
+        }
+    }
+}
