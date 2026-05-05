@@ -1,5 +1,5 @@
 {
-    "name": "mgiannopoulos24/codemirror-forge",
+    "name": "mgiannopoulos24/cm-forge",
     "description": "Forge your perfect CodeMirror editor experience. Customize themes, fonts, and display options for all CodeMirror instances in WordPress.",
     "type": "wordpress-plugin",
     "require": {

@@ -1,6 +1,6 @@
 <?php
 /**
- * Plugin Name: CodeMirror Forge
+ * Plugin Name: CM Forge
  * Plugin URI: https://github.com/mgiannopoulos24/codemirror-forge
  * Description: Forge your perfect CodeMirror editor experience. Customize themes, fonts, and display options.
  * Version: 1.3.3

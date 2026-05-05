@@ -1,6 +1,6 @@
 <?php
 /**
- * Uninstall procedure for CodeMirror Forge.
+ * Uninstall procedure for CM Forge.
  *
  * Removes all plugin data when the plugin is uninstalled.
  *

@@ -1,4 +1,4 @@
-=== CodeMirror Forge ===
+=== CM Forge ===
 Contributors: mgiannopoulos24
 Tags: codemirror, editor, theme, customize, font
 Requires at least: 5.0
@@ -12,7 +12,7 @@ Forge your perfect CodeMirror editor experience. Customize themes, fonts, and di
 
 == Description ==
 
-CodeMirror Forge provides powerful customization options for WordPress CodeMirror editors, making it easy to personalize your code editing experience. Instead of using default editor settings, you can customize themes, font sizes, line numbers, and word wrapping across all CodeMirror instances in WordPress.
+CM Forge provides powerful customization options for WordPress CodeMirror editors, making it easy to personalize your code editing experience. Instead of using default editor settings, you can customize themes, font sizes, line numbers, and word wrapping across all CodeMirror instances in WordPress.
 
 = Features =
 
@@ -75,7 +75,39 @@ For support, please visit the GitHub repository or the WordPress support forums.
 
 == External Services ==
 
-This plugin loads themes from the CodeMirror CDN (cdnjs.cloudflare.com) when selected by the user. No personal data is sent to external services.
+This plugin relies on third-party services to provide core font and theme customization features. No account is required to use this plugin, and no personal data is collected or transmitted beyond standard HTTP requests for public asset loading. All services are used under the permitted exception for plugins providing a service, as outlined in WordPress plugin guidelines.
+
+1. **Fontsource API (api.fontsource.org/v1)**
+   - **Purpose**: Fetches the list of available open-source fonts to populate the font family dropdown in the plugin settings.
+   - **Data Sent**: A GET request is made to retrieve font metadata when the plugin admin page loads. No personal data, user information, or site-specific data is sent.
+   - **Provider**: Fontsource (https://fontsource.org)
+   - **Terms of Service**: https://fontsource.org/terms
+   - **Privacy Policy**: https://fontsource.org/privacy
+
+2. **Fontsource CDN (cdn.jsdelivr.net/npm/@fontsource/)**
+   - **Purpose**: Loads font stylesheets (including specific weights) when a font is selected in the plugin settings. This enables proper rendering of font weight, size, line height, and letter spacing customizations.
+   - **Data Sent**: A GET request for the corresponding font CSS file is made when a user selects a font or changes font weight. No personal data is transmitted.
+   - **Provider**: Fontsource via jsDelivr CDN (https://www.jsdelivr.com)
+   - **Terms of Service**: https://www.jsdelivr.com/terms
+   - **Privacy Policy**: https://www.jsdelivr.com/privacy
+   - **License Note**: All fonts hosted on Fontsource are licensed under the Open Font License (OFL) or GPL, which are fully compatible with WordPress plugin guidelines.
+
+3. **CodeMirror CDN (cdn.jsdelivr.net/npm/codemirror@5.65.16/)**
+   - **Purpose**: Loads CodeMirror 5 theme CSS files when a theme is selected in the plugin settings.
+   - **Data Sent**: A GET request for the corresponding theme CSS file is made when a user selects a theme. No personal data is transmitted.
+   - **Provider**: CodeMirror via jsDelivr CDN (https://www.jsdelivr.com)
+   - **Terms of Service**: https://www.jsdelivr.com/terms
+   - **Privacy Policy**: https://www.jsdelivr.com/privacy
+   - **License Note**: CodeMirror 5 is licensed under MIT, which is fully compatible with WordPress plugin guidelines.
+
+== Notes on Remote Asset Loading ==
+
+This plugin loads font and theme assets from public CDNs rather than bundling them locally to:
+- Keep the plugin lightweight (avoid bundling hundreds of font files and theme CSS)
+- Ensure users have access to the latest font and theme versions
+- Comply with GPL compatibility requirements for all assets
+
+All assets are publicly available, require no authentication to access, and no user data is tracked by the service providers.
 
 == Screenshots ==
 

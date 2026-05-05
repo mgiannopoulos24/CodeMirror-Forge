@@ -101,7 +101,10 @@
             });
         }
 
-        // Always fetch fonts from Fontsource API to populate the full list
+        // Always fetch fonts from Fontsource API (api.fontsource.org/v1) to populate the full list.
+        // Font stylesheets and specific weights are loaded via the Fontsource CDN (cdn.jsdelivr.net/npm/@fontsource/)
+        // because WordPress does not bundle font files. This is required to properly apply font weight, size,
+        // line height, and letter spacing customizations.
         // The saved value will be preserved during the fetch
         fetchFonts(fontFamilySelect);
 

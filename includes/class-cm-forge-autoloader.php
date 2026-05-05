@@ -1,6 +1,6 @@
 <?php
 /**
- * Autoloader for CodeMirror Forge plugin
+ * Autoloader for CM Forge plugin
  *
  * @package CM_Forge
  */
